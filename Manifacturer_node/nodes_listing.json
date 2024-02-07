@@ -1,0 +1,72 @@
+[
+  {
+    "node_ID" : "Man-ID1100",
+    "node_ip" : "127.0.0.1",
+    "node_port": "5000",
+    "node_cl_ip" : "127.0.0.1:8080",
+    "VP"        : "1",
+    "public_adr": "30819f300d06092a864886f70d010101050003818d0030818902818100f8a94ce38ce6df5e433ee49814596c7b99d20eb89dfee5d8e629c1a5ec28ac4038ebb4f5f590bbb7499859f5ea7f71b05b2a5ce846cce56a3cfb00a77a525d0e11f19974f6a02038b61f17f29bb9f19274ac39fe8b6ce2220378425ec430a64794a541ff70aadc8216e998a599e5aa27a3886032f9ef68536118ab5b184834710203010001",
+    "location"  : {"street":  "86 Rue Al Imam Al Bakri",
+                  "city":  "Cite El Kharroub",
+                  "state" :   "Governorate Nabeul",
+                  "country" : "Tunisia",
+                  "phone": "+216 72 837 389",
+                  "zipcode" : "8056"
+                  },
+    "FN" :"assembling all the pieces together"
+  },
+  {
+    "node_ID" : "STR-ID2780",
+    "node_ip" : "127.0.0.1",
+    "node_port": "5001",
+    "node_cl_ip" : "127.0.0.1",
+    "node_cl_port":"8081",
+    "VP"        : "",
+    "public_adr": "30819f300d06092a864886f70d010101050003818d0030818902818100aa331c05caa85d1360a1347497f074f283b1c42c94a9830a3914377e893b76fbb46133fba12e87589b29b3d7af74797e60ffcfdb1a67a30ead084bffdbc2e18eace0a270219db676f01dd6d2cbd909ce8da4ca70546fefbea593da501bd720d9bb9585a54e36fc829e8fde2e3129e44377191648f2fd580c45f9dff22b9a9fa10203010001",
+    "location"  : {
+        "street": "18 Rue Mohamed Mestiri",
+        "city": "Henchir El Kahla",
+        "state": "Governorate Bizerte",
+        "country": "Tunisia",
+        "phone": "+216 72 824 895",
+        "zipcode": "7022"        
+      },
+    "FN" :"Packing and packaging"
+  },
+  {
+    "node_ID" : "Shp-ID3663",
+    "node_ip" : "127.0.0.1",
+    "node_port": "5002",
+    "node_cl_ip" : "127.0.0.1",
+    "node_cl_port":"8081",
+    "VP"        : "",
+    "public_adr": "30819f300d06092a864886f70d010101050003818d0030818902818100826d575b7e054a6891898120fb360246640c60b31a19cddef35822f47c9e7ffec24ad8636d02db69fecc8e5bd4bcb5b44027c5741e2436b2451bab7f0d9ad083e21b5c2477bda7b746a834ae05895e6a7e9ce406b6c2955a5dd1dcc808246f8f7e3173f5014895ffa84593339870430b24fe393bd68c2706fd4ef160868af2050203010001",
+    "location"  :  {
+        "street": "132 Rue Elitha",
+        "city": "El Morra",
+        "state": "Governorate Medenine",
+        "country": "Tunisia",
+        "phone": "+216 75 944 289",
+        "zipcode": "4191"
+      },
+    "FN" :"Selling and buying the product"
+  },
+  {
+    "node_ID" : "DLV-ID4785",
+    "node_ip" : "127.0.0.1",
+    "node_port": "5003",
+    "node_cl_ip" : "127.0.0.1",
+    "node_cl_port":"8081",
+    "VP"        : "",
+    "public_adr": "30819f300d06092a864886f70d010101050003818d0030818902818100a074d998a5055dd9d1de44b27858e29f5f1b7e7c92462fa2a21ebfff3c3bf7375ff3591e4dbc79752cd1265fb8fcfbc6f63d16603c50521a6ce6166eeb68b6ec179bd5146079aec23bd6fe3e3f97ebc1c82a26faa4d49cc5783fcd6fff032fe65098cba03043433b4d31dc9ef1a1fa111767c29a218e4d2eb9576b4706e86c050203010001",
+    "location"  :   {
+        "street": "47 Rue de Sokrine",
+        "city": "Teboursouk",
+        "state": "Governorate Beja",
+        "country": "Tunisia",
+        "phone": "+216 78 227 397",
+        "zipcode": "9040"
+      },
+    "FN" :"doing the delivery to any demanded destination"
+  }
+]

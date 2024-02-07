@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <video id="qr-video" width="100%" autoplay></video>
+    <canvas id="qr-canvas" style="display: none;"></canvas>
+    <script src="{{ url_for('static', filename='jsQR.js') }}"></script>
+    <script>
+        const video = document.getElementById('qr-video');
+        const canvas = document.getElementById('qr-canvas').getContext('2d');
+        
+        async function startCamera() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                video.srcObject = stream;
+            } catch (error) {
+                console.error('Error accessing camera:', error);
+            }
+        }
+        
+        startCamera();
+        var qrCodeData = "";
+        video.addEventListener('play', function () {
+            const canvasElement = document.getElementById('qr-canvas');
+            canvasElement.width = video.videoWidth;
+            canvasElement.height = video.videoHeight;
+        
+            const canvasContext = canvasElement.getContext('2d');
+            const qrCanvas = document.getElementById('qr-canvas');
+        
+            (function scan() {
+                if (video.paused || video.ended) {
+                    return setTimeout(scan, 100);
+                }
+        
+                canvasContext.drawImage(video, 0, 0, canvasElement.width, canvasElement.height);
+                const imageData = canvasContext.getImageData(0, 0, canvasElement.width, canvasElement.height);
+                const code = jsQR(imageData.data, imageData.width, imageData.height);
+        
+                if (code) {
+                    console.log('QR Code detected:', code.data);
+                    qrCodeData = code.data;
+    
+                    // Create a JSON object with the QR code data
+                    const jsonData = {
+                        'code': qrCodeData
+                    };
+                    fetch('/make/get_qr_code', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(jsonData)
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            console.log('QR code data sent to the server.');
+                            console.log(JSON.stringify(jsonData));
+                            alert("QR code scanned successfully");
+                            window.opener.postMessage(code.data, "*");
+                            window.close();
+                        } else {
+                            console.error('Error sending QR code data to the server.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error sending QR code data:', error);
+                    });
+                }
+                requestAnimationFrame(scan);
+            })();
+            });
+
+       
+    </script>
+</body>
+</html>

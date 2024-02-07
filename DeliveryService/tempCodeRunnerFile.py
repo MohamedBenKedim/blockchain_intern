@@ -1,0 +1,1 @@
+'c:\\Users\\MSI\\Desktop\\2022-2023\\PyBlockChain\\blockchain-python-tutorial\\blockchain\\nodes_listing.json', 'r'

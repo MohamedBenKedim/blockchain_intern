@@ -1,0 +1,30 @@
+[
+    {
+        "product_name" : "Iphone",
+        "manufacturer" : "Man-ID1100",
+        "model" : "Pro MAX" ,
+        "specifications" : "details about the phone",
+        "unique_identifier" :"IMP1001"
+    },
+    {
+        "product_name" : "Redmi",
+        "manufacturer" : "Man-ID1100",
+        "model" : "note21" ,
+        "specifications" : "details about the phone",
+        "unique_identifier" :"RMN1521"
+    },
+    {
+        "product_name" : "Redmi",
+        "manufacturer" : "Man-ID1100",
+        "model" : "xlive" ,
+        "specifications" : "details about the phone",
+        "unique_identifier" :"RMX6632"
+    },
+    {
+        "product_name" : "oppo",
+        "manufacturer" : "Man-ID1100",
+        "model" : "reno5" ,
+        "specifications" : "details about the phone",
+        "unique_identifier" :"OMR5632"
+    }
+]
